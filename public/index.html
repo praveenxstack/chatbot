@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <meta name="description" content="A minimalist AI chatbot interface.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div id="initial-view" class="hero-section">
+            <h1>Hello there!</h1>
+            <p>How can I help you today?</p>
+
+            <div class="suggestions-grid">
+                <button class="suggestion-btn" data-prompt="What are the advantages of using Next.js?">What are the
+                    advantages of using Next.js?</button>
+                <button class="suggestion-btn" data-prompt="Write code to demonstrate Dijkstra's algorithm">Write code
+                    to demonstrate Dijkstra's algorithm</button>
+                <button class="suggestion-btn" data-prompt="Help me write an essay about Silicon Valley">Help me write
+                    an essay about Silicon Valley</button>
+                <button class="suggestion-btn" data-prompt="What is the weather in San Francisco?">What is the weather
+                    in San Francisco?</button>
+            </div>
+        </div>
+
+        <section class="messages-area" id="chat-messages"></section>
+
+        <footer class="input-container">
+            <form id="chat-form" class="input-box">
+                <textarea id="user-input" placeholder="Send a message..." rows="1" required></textarea>
+
+                <div class="input-toolbar">
+                    <div class="toolbar-left">
+                        <button type="button" class="tool-btn" title="Attach">
+                            <i data-lucide="paperclip"></i>
+                        </button>
+                        <div class="model-indicator">
+                            <i data-lucide="sparkles"></i>
+                            <span>Gemini 2.5 Flash Lite</span>
+                        </div>
+                    </div>
+                    <button type="submit" id="send-btn" class="send-circle">
+                        <i data-lucide="arrow-up"></i>
+                    </button>
+                </div>
+            </form>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
