@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const messageDiv = document.createElement('div');
         messageDiv.classList.add('message', `${sender}-message`);
 
-        const label = sender === 'user' ? 'You' : 'Nexus AI';
+        const label = sender === 'user' ? 'You' : 'AI';
 
         // Use marked to parse markdown (e.g., **bold** -> <strong>)
         // This removes the raw asterisks and replaces them with clean formatting
@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const indicatorDiv = document.createElement('div');
         indicatorDiv.classList.add('message', 'ai-message');
         indicatorDiv.innerHTML = `
-            <span class="message-label">Nexus AI</span>
+            <span class="message-label">AI</span>
             <div class="message-content">
                 <div class="typing-dots">
                     <span></span><span></span><span></span>
@@ -114,3 +114,4 @@ document.addEventListener('DOMContentLoaded', () => {
         messagesArea.scrollTop = messagesArea.scrollHeight;
     }
 });
+
